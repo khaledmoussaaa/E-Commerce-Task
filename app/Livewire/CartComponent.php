@@ -58,6 +58,9 @@ class CartComponent extends Component
     {
         if ($cartItem = Cart::find($cartId)) {
             $cartItem->quantity > 1 ? $cartItem->decrement('quantity') : $cartItem->delete();
+            $cartItem->update([
+                'total_price' => $cartItem->quantity * $cartItem->product->price
+            ]);
             $this->dispatch('cartUpdated');
         }
     }
