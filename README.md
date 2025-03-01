@@ -89,9 +89,7 @@ Then open **http://127.0.0.1:8000** in your browser.
 ---
 
 ## 👥 Contributors
-- **Your Name** (khaledmoussaeid@gmail.com)
-- **Other Team Members**
-
+- **Khaled Moussa** (khaledmoussaeid@gmail.com)
 ---
 
 ## 📜 License
