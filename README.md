@@ -30,7 +30,6 @@ It supports **1,000,000+ products**, optimized queries, and real-time cart updat
 
 ### ✅ **Performance & Optimization**
 - **Indexing (`$table->index()`)** for fast product & cart queries.
-- **Eager loading (`with()`)** to prevent `N+1` query issues.
 - **Pagination (`paginate(20)`)** to avoid memory overload.
 - **Batching (`chunk(5000)`) for seeding 1M+ products efficiently**.
 - **Efficient seeding strategies (`batch insert every 5000 records`)** ensure smooth execution.
