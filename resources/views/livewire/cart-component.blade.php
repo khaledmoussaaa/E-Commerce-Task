@@ -11,7 +11,7 @@
         </button>
 
         <!-- Cart Dropdown -->
-        <div x-show="open" x-transition class="absolute right-0 mt-2 w-80 bg-white shadow-lg rounded-lg p-4 border border-gray-200 z-50">
+        <div x-show="open" x-transition @click.outside="open = false" class="absolute right-0 mt-2 w-80 bg-white shadow-lg rounded-lg p-4 border border-gray-200 z-50">
 
             <!-- Header -->
             <div class="flex items-center justify-between pb-2">
