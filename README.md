@@ -25,9 +25,8 @@ It supports **1,000,000+ products**, optimized queries, and real-time cart updat
 - Displays cart summary (total price, product names, and quantities).
 
 ### ✅ **Frontend Interactivity**
-- **Alpine.js for cart dropdown/modal toggling**.
+- **Alpine.js for cart modal toggling**.
 - **Tailwind CSS for a clean, modern, and responsive UI**.
-- **Skeleton loading effect for product images**.
 
 ### ✅ **Performance & Optimization**
 - **Indexing (`$table->index()`)** for fast product & cart queries.
