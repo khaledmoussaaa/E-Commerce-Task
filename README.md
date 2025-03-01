@@ -2,7 +2,7 @@
 
 ## 🚀 Overview
 This project is a **single-page product listing application** with a **real-time shopping cart** built using:
-- **Laravel 11** (Backend)
+- **Laravel 12** (Backend)
 - **Livewire v3** (Reactivity & Real-time UI updates)
 - **Alpine.js** (Frontend Interactivity)
 - **Tailwind CSS** (Modern Styling)
