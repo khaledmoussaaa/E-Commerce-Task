@@ -43,9 +43,9 @@ class ProductComponent extends Component
     {
         $this->cartItems = Cart::where(function ($query) {
             if (Auth::check()) {
-                $query->where('user_id', Auth::id());
+                $query->where('user_id', get_authId());
             } else {
-                $query->where('session_id', session()->getId());
+                $query->where('session_id', get_sessionId());
             }
         })->pluck('quantity', 'product_id')->toArray();
     }
@@ -58,14 +58,18 @@ class ProductComponent extends Component
      */
     public function addToCart(int $productId): void
     {
-        Cart::updateOrCreate(
-            [
-                'user_id' => Auth::id(),
-                'session_id' => session()->getId(),
-                'product_id' => $productId,
-            ]
-        );
-        $this->dispatch('cartUpdated');
+        $product = Product::findOrFail($productId);
+        if ($product) {
+            Cart::updateOrCreate(
+                [
+                    'user_id' => get_authId(),
+                    'session_id' => get_sessionId(),
+                    'product_id' => $product->id,
+                    'total_price' => $product->price,
+                ]
+            );
+            $this->dispatch('cartUpdated');
+        }
     }
 
     /**

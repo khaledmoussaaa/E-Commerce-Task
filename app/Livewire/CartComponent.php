@@ -40,6 +40,10 @@ class CartComponent extends Component
     {
         if ($cartItem = Cart::find($cartId)) {
             $cartItem->increment('quantity');
+            $cartItem->update([
+                'total_price' => $cartItem->quantity * $cartItem->product->price
+            ]);
+            $this->dispatch('cartUpdated');
         }
     }
 

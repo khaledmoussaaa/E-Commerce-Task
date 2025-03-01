@@ -27,7 +27,7 @@
 
                     <div class="flex-1">
                         <h3 class="text-md font-semibold">{{ $item->product->name }}</h3>
-                        <p class="text-gray-600">${{ number_format($item->product->price, 2) }}</p>
+                        <p class="text-gray-600">${{ number_format($item->total_price, 2) }}</p>
 
                         <!-- Quantity Control -->
                         <div class="flex items-center space-x-2 mt-1">

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('session_id')->nullable();
             $table->foreignId('product_id')->nullable()->constrained('products')->cascadeOnDelete();
             $table->integer('quantity')->default(1);
+            $table->decimal('total_price', 8, 2)->default(0);
             $table->timestamps();
         });
     }
