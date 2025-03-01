@@ -82,8 +82,6 @@ Then open **http://127.0.0.1:8000** in your browser.
 
 ## ⚡ Optimization Notes
 - **Indexes added** on `products.name`, `products.price`, `carts.user_id`, `carts.session_id`, `carts.product_id`.
-- **Eager Loading (`Product::with('category')`)** reduces DB queries.
-- **Uses Laravel's Query Caching (`Cache::remember()`)** for expensive queries.
 - **Batch seeding (5000 records per batch) ensures smooth product insertion.**
 
 ---
