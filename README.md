@@ -2,7 +2,7 @@
 
 ## 🚀 Overview
 This project is a **single-page product listing application** with a **real-time shopping cart** built using:
-- **Laravel 11** (Backend)
+- **Laravel 12** (Backend)
 - **Livewire v3** (Reactivity & Real-time UI updates)
 - **Alpine.js** (Frontend Interactivity)
 - **Tailwind CSS** (Modern Styling)
@@ -25,9 +25,8 @@ It supports **1,000,000+ products**, optimized queries, and real-time cart updat
 - Displays cart summary (total price, product names, and quantities).
 
 ### ✅ **Frontend Interactivity**
-- **Alpine.js for cart dropdown/modal toggling**.
+- **Alpine.js for cart modal toggling**.
 - **Tailwind CSS for a clean, modern, and responsive UI**.
-- **Skeleton loading effect for product images**.
 
 ### ✅ **Performance & Optimization**
 - **Indexing (`$table->index()`)** for fast product & cart queries.
@@ -81,17 +80,13 @@ Then open **http://127.0.0.1:8000** in your browser.
 ---
 
 ## ⚡ Optimization Notes
-- **Indexes added** on `products.name`, `products.price`, `carts.user_id`, `carts.session_id`, `carts.product_id`.
-- **Eager Loading (`Product::with('category')`)** reduces DB queries.
-- **Uses Laravel's Query Caching (`Cache::remember()`)** for expensive queries.
+- **Indexes added** on `products.name`, `products.price`.
 - **Batch seeding (5000 records per batch) ensures smooth product insertion.**
 
 ---
 
 ## 👥 Contributors
-- **Your Name** (khaledmoussaeid@gmail.com)
-- **Other Team Members**
-
+- **Khaled Moussa** (khaledmoussaeid@gmail.com)
 ---
 
 ## 📜 License
